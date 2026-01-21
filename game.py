@@ -1,6 +1,11 @@
 import random
 import sqlite3
-import telebot
+import logging
+from telegram import Update
+from telegram.ext import Application, CommandHandler, ContextTypes
+
+# '8434994248:AAEMhFC3K9PkomWRGzEuJbiWzXrtvEGc9h0'
+
 # создадим базу данный для сохранения рекордов
 table = sqlite3.connect("record_table")
 cursorr = table.cursor()
@@ -16,9 +21,6 @@ pk_table =("""CREATE TABLE IF NOT EXISTS pk_record(
 cursorr.execute(human_table)
 cursorr.execute(pk_table)
 table.commit()
-
-
-
 
 name = input("введите имя игрока: ")
 game = input("выберите режи игры:  человек угадывает: chel, компьютер угадывает: pk ")
