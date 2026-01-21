@@ -1,5 +1,6 @@
 import random
 import sqlite3
+import telebot
 # создадим базу данный для сохранения рекордов
 table = sqlite3.connect("record_table")
 cursorr = table.cursor()
