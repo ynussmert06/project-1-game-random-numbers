@@ -4,7 +4,7 @@ import logging
 from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 
-# '8434994248:AAEMhFC3K9PkomWRGzEuJbiWzXrtvEGc9h0'
+
 
 # создадим базу данный для сохранения рекордов
 table = sqlite3.connect("record_table")
